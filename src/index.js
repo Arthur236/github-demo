@@ -5,8 +5,10 @@ import { ApolloClient } from 'apollo-client';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 import { HttpLink } from 'apollo-link-http';
 
+import App from './components/App/App';
+import SearchContextProvider from './contexts/SearchContext';
+
 import './index.css';
-import App from './components/App';
 import * as serviceWorker from './serviceWorker';
 
 const cache = new InMemoryCache();
@@ -23,7 +25,9 @@ const client = new ApolloClient({
 ReactDOM.render(
   <React.StrictMode>
     <ApolloProvider client={client}>
-      <App/>
+      <SearchContextProvider>
+        <App/>
+      </SearchContextProvider>
     </ApolloProvider>
   </React.StrictMode>,
   document.getElementById('root')

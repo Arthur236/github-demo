@@ -3,6 +3,7 @@ import gql from "graphql-tag";
 export const searchUser = gql`
   query searchUser($login: String!) {
     user(login: $login) {
+      id
       avatarUrl
       bio
       websiteUrl
