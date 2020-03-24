@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #fefefe;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -35,4 +35,21 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px;
+}
+
+.card {
+  width: 250px;
+  border: #dedede 1px solid;
+  border-radius: 5px;
+}
+
+.card > img {
+  width: 250px;
+  margin-right: 20px;
 }
